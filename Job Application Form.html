@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Job Application Form</title>
+</head>
+<body>
+
+  <h1>Job Application Form</h1>
+
+  <form action="/submit" method="post" enctype="multipart/form-data">
+    
+    <!-- Personal Information -->
+    <fieldset>
+      <legend>Personal Information</legend>
+      
+      <label for="name">Full Name:</label><br>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="email">Email:</label><br>
+      <input type="email" id="email" name="email" required><br><br>
+
+      <label for="phone">Phone Number:</label><br>
+      <input type="tel" id="phone" name="phone" required><br><br>
+    </fieldset>
+
+    <!-- Address -->
+    <fieldset>
+      <legend>Address</legend>
+
+      <label for="address">Current Address:</label><br>
+      <textarea id="address" name="address" rows="4" cols="50" required></textarea><br><br>
+    </fieldset>
+
+    <!-- Education -->
+    <fieldset>
+      <legend>Education</legend>
+
+      <label for="qualification">Highest Qualification:</label><br>
+      <select id="qualification" name="qualification" required>
+        <option value="">--Select--</option>
+        <option value="High School">High School</option>
+        <option value="Diploma">Diploma</option>
+        <option value="Bachelor's">Bachelor's Degree</option>
+        <option value="Master's">Master's Degree</option>
+        <option value="PhD">PhD</option>
+      </select><br><br>
+    </fieldset>
+
+    <!-- Work Experience -->
+    <fieldset>
+      <legend>Work Experience</legend>
+
+      <label>Do you have previous work experience?</label><br>
+      <input type="radio" id="exp_yes" name="experience" value="Yes" required>
+      <label for="exp_yes">Yes</label><br>
+      <input type="radio" id="exp_no" name="experience" value="No">
+      <label for="exp_no">No</label><br><br>
+    </fieldset>
+
+    <!-- Skills -->
+    <fieldset>
+      <legend>Skills</legend>
+
+      <label>Select your skills:</label><br>
+      <input type="checkbox" id="skill1" name="skills" value="HTML">
+      <label for="skill1">HTML</label><br>
+      <input type="checkbox" id="skill2" name="skills" value="CSS">
+      <label for="skill2">CSS</label><br>
+      <input type="checkbox" id="skill3" name="skills" value="JavaScript">
+      <label for="skill3">JavaScript</label><br>
+      <input type="checkbox" id="skill4" name="skills" value="Python">
+      <label for="skill4">Python</label><br>
+      <input type="checkbox" id="skill5" name="skills" value="Java">
+      <label for="skill5">Java</label><br><br>
+    </fieldset>
+
+    <!-- Availability -->
+    <fieldset>
+      <legend>Availability</legend>
+
+      <label for="availability">Available to Join From:</label><br>
+      <input type="date" id="availability" name="availability" required><br><br>
+    </fieldset>
+
+    <!-- Resume Upload -->
+    <fieldset>
+      <legend>Upload Resume</legend>
+
+      <label for="resume">Upload your resume (PDF or DOC):</label><br>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx" required><br><br>
+    </fieldset>
+
+    <!-- Declaration -->
+    <fieldset>
+      <legend>Declaration</legend>
+
+      <input type="checkbox" id="declare" name="declare" required>
+      <label for="declare">I hereby declare that the information provided is true and correct.</label><br><br>
+    </fieldset>
+
+    <!-- Submit -->
+    <input type="submit" value="Submit Application">
+
+  </form>
+
+</body>
+</html>
